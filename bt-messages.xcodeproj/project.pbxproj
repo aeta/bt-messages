@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F38022B5EAE460D3C728D35 /* Pods_bt_messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3F9317E5B94932F4C0F0DE /* Pods_bt_messages.framework */; };
 		733A25FD1CF5559B001AABD8 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A25FC1CF5559B001AABD8 /* Alerts.swift */; };
+		CC1DA1DA1DD85C71004CC36A /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DA1D91DD85C71004CC36A /* MessagesViewController.swift */; };
 		CCA46E941CF1F9B300C79B94 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCA46E931CF1F9AF00C79B94 /* Montserrat-Regular.otf */; };
 		CCA46E981CF1F9E200C79B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA46E971CF1F9E200C79B94 /* Main.storyboard */; };
 		CCA46E9B1CF1FA9C00C79B94 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CCA46E991CF1FA9C00C79B94 /* icon.png */; };
@@ -17,12 +19,15 @@
 		CCACA2AF1CF16E7600F7638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCACA2AE1CF16E7600F7638C /* Assets.xcassets */; };
 		CCACA2B21CF16E7600F7638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCACA2B01CF16E7600F7638C /* LaunchScreen.storyboard */; };
 		CCACA2BA1CF1749C00F7638C /* MCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACA2B91CF1749C00F7638C /* MCManager.swift */; };
-		CCACA2BC1CF18C2700F7638C /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACA2BB1CF18C2700F7638C /* ConnectionsViewController.swift */; };
-		CCACA2BE1CF19B2700F7638C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACA2BD1CF19B2700F7638C /* FirstViewController.swift */; };
+		CCD2297B1DD87413003B472F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2297A1DD87413003B472F /* SettingsViewController.swift */; };
+		CCD229821DD8A223003B472F /* PhotoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD229811DD8A223003B472F /* PhotoDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35C4D2381843232C72F7AE5F /* Pods-bt-messages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bt-messages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bt-messages/Pods-bt-messages.debug.xcconfig"; sourceTree = "<group>"; };
 		733A25FC1CF5559B001AABD8 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		A4D6CCB608FBC2EE7C010D70 /* Pods-bt-messages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bt-messages.release.xcconfig"; path = "Pods/Target Support Files/Pods-bt-messages/Pods-bt-messages.release.xcconfig"; sourceTree = "<group>"; };
+		CC1DA1D91DD85C71004CC36A /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		CCA46E931CF1F9AF00C79B94 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		CCA46E971CF1F9E200C79B94 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CCA46E991CF1FA9C00C79B94 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -34,8 +39,10 @@
 		CCACA2B11CF16E7600F7638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCACA2B31CF16E7600F7638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCACA2B91CF1749C00F7638C /* MCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCManager.swift; sourceTree = "<group>"; };
-		CCACA2BB1CF18C2700F7638C /* ConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
-		CCACA2BD1CF19B2700F7638C /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		CCD2297A1DD87413003B472F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CCD2297E1DD896FC003B472F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD229811DD8A223003B472F /* PhotoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetail.swift; sourceTree = "<group>"; };
+		EE3F9317E5B94932F4C0F0DE /* Pods_bt_messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bt_messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +50,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F38022B5EAE460D3C728D35 /* Pods_bt_messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62C17D1EDEB30EA3F5EF7E21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F9317E5B94932F4C0F0DE /* Pods_bt_messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC964E8C1CF3FC2300855171 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +82,8 @@
 			children = (
 				CCACA2A61CF16E7600F7638C /* bt-messages */,
 				CCACA2A51CF16E7600F7638C /* Products */,
+				F7E54E106F15CD8DBCE1232B /* Pods */,
+				62C17D1EDEB30EA3F5EF7E21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,17 +98,28 @@
 		CCACA2A61CF16E7600F7638C /* bt-messages */ = {
 			isa = PBXGroup;
 			children = (
-				CCA46E971CF1F9E200C79B94 /* Main.storyboard */,
+				CCD2297E1DD896FC003B472F /* Info.plist */,
 				CCACA2A71CF16E7600F7638C /* AppDelegate.swift */,
-				CCACA2BB1CF18C2700F7638C /* ConnectionsViewController.swift */,
 				CCACA2AE1CF16E7600F7638C /* Assets.xcassets */,
 				CCACA2B91CF1749C00F7638C /* MCManager.swift */,
-				CCACA2BD1CF19B2700F7638C /* FirstViewController.swift */,
 				CCA46EA11CF2155200C79B94 /* Helpers.swift */,
 				CC964E8C1CF3FC2300855171 /* Supporting Files */,
 				733A25FC1CF5559B001AABD8 /* Alerts.swift */,
+				CCA46E971CF1F9E200C79B94 /* Main.storyboard */,
+				CC1DA1D91DD85C71004CC36A /* MessagesViewController.swift */,
+				CCD2297A1DD87413003B472F /* SettingsViewController.swift */,
+				CCD229811DD8A223003B472F /* PhotoDetail.swift */,
 			);
 			path = "bt-messages";
+			sourceTree = "<group>";
+		};
+		F7E54E106F15CD8DBCE1232B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35C4D2381843232C72F7AE5F /* Pods-bt-messages.debug.xcconfig */,
+				A4D6CCB608FBC2EE7C010D70 /* Pods-bt-messages.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,9 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCACA2B61CF16E7600F7638C /* Build configuration list for PBXNativeTarget "bt-messages" */;
 			buildPhases = (
+				42D6660502CAE35A0B4AB1CB /* 📦 Check Pods Manifest.lock */,
 				CCACA2A01CF16E7600F7638C /* Sources */,
 				CCACA2A11CF16E7600F7638C /* Frameworks */,
 				CCACA2A21CF16E7600F7638C /* Resources */,
+				624A47B80642013A9E6CC600 /* 📦 Embed Pods Frameworks */,
+				A068E1F4094B14E47DAD3CBE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,11 +152,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Team Auxiliary";
 				TargetAttributes = {
 					CCACA2A31CF16E7600F7638C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = HKEK57AU3M;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -162,17 +196,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42D6660502CAE35A0B4AB1CB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		624A47B80642013A9E6CC600 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bt-messages/Pods-bt-messages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A068E1F4094B14E47DAD3CBE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bt-messages/Pods-bt-messages-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCACA2A01CF16E7600F7638C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCACA2BC1CF18C2700F7638C /* ConnectionsViewController.swift in Sources */,
+				CC1DA1DA1DD85C71004CC36A /* MessagesViewController.swift in Sources */,
 				CCA46EA21CF2155200C79B94 /* Helpers.swift in Sources */,
 				CCACA2A81CF16E7600F7638C /* AppDelegate.swift in Sources */,
 				CCACA2BA1CF1749C00F7638C /* MCManager.swift in Sources */,
 				733A25FD1CF5559B001AABD8 /* Alerts.swift in Sources */,
-				CCACA2BE1CF19B2700F7638C /* FirstViewController.swift in Sources */,
+				CCD229821DD8A223003B472F /* PhotoDetail.swift in Sources */,
+				CCD2297B1DD87413003B472F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +287,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -249,8 +334,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -269,37 +356,44 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		CCACA2B71CF16E7600F7638C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C4D2381843232C72F7AE5F /* Pods-bt-messages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HKEK57AU3M;
 				INFOPLIST_FILE = "bt-messages/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "teamauxiliary.bt-messages";
+				PRODUCT_BUNDLE_IDENTIFIER = aeta.BTMessages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		CCACA2B81CF16E7600F7638C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D6CCB608FBC2EE7C010D70 /* Pods-bt-messages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HKEK57AU3M;
 				INFOPLIST_FILE = "bt-messages/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "teamauxiliary.bt-messages";
+				PRODUCT_BUNDLE_IDENTIFIER = aeta.BTMessages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

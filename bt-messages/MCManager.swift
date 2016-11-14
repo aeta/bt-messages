@@ -10,13 +10,12 @@ import Foundation
 import MultipeerConnectivity
 
 class MCManager: NSObject {
-    
     var peerID: MCPeerID?
     var session: MCSession?
     var browser: MCBrowserViewController?
     var advertiser: MCAdvertiserAssistant?
     
-    func setupPeerAndSessionWithDisplayName(displayName: String) {
+    func setupPeerAndSessionWithDisplayName(_ displayName: String) {
         peerID = MCPeerID(displayName: displayName)
         session = MCSession(peer: peerID!)
         session?.delegate = self
@@ -26,7 +25,7 @@ class MCManager: NSObject {
         browser = MCBrowserViewController(serviceType: "chat-files", session: session!)
     }
     
-    func advertiseSelf(shouldAdvertise: Bool) {
+    func advertiseSelf(_ shouldAdvertise: Bool) {
         if shouldAdvertise {
             advertiser = MCAdvertiserAssistant(serviceType: "chat-files", discoveryInfo: nil, session: session!)
             advertiser!.start()
@@ -40,55 +39,56 @@ class MCManager: NSObject {
 }
 
 extension MCManager: MCSessionDelegate {
-    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         let dict = [
             "peerID": peerID,
             "state": state.hashValue
-        ]
+        ] as [String : Any]
+
         debugPrint("didChangeState")
-        NSNotificationCenter.defaultCenter().postNotificationName("MCDidChangeStateNotification", object: nil, userInfo: dict)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "MCDidChangeStateNotification"), object: nil, userInfo: dict)
     }
     
-    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         let dict = [
             "data": data,
             "peerID": peerID
-        ]
+        ] as [String : Any]
         debugPrint("didReceiveData")
-        NSNotificationCenter.defaultCenter().postNotificationName("MCDidReceiveDataNotification", object: nil, userInfo: dict)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "MCDidReceiveDataNotification"), object: nil, userInfo: dict)
     }
     
-    func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
+    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
         let dict = [
             "resourceName": resourceName,
             "peerID": peerID,
             "progress": progress
-        ]
+        ] as [String : Any]
         debugPrint("didStartReceivingResourceWithName")
-        NSNotificationCenter.defaultCenter().postNotificationName("MCDidStartReceivingResourceNotification", object: nil, userInfo: dict)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "MCDidStartReceivingResourceNotification"), object: nil, userInfo: dict)
         
-        dispatch_async(dispatch_get_main_queue(), {
-            progress.addObserver(self, forKeyPath: "fractionCompleted", options: [.New], context: nil)
+        DispatchQueue.main.async(execute: {
+            progress.addObserver(self, forKeyPath: "fractionCompleted", options: [.new], context: nil)
         })
     }
     
-    func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
         let dict = [
             "resourceName": resourceName,
             "peerID": peerID,
             "localURL": localURL
-        ]
+        ] as [String : Any]
         debugPrint("didFinishReceivingResourceWithName")
-        NSNotificationCenter.defaultCenter().postNotificationName("MCDidFinishReceivingResourceNotification", object: nil, userInfo: dict)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "MCDidFinishReceivingResourceNotification"), object: nil, userInfo: dict)
     }
     
-    func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         // empty, no methods are needed in this function
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        NSNotificationCenter.defaultCenter().postNotificationName("MCReceivingProgressNotification", object: nil, userInfo: [
-                "progress": NSProgress()
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "MCReceivingProgressNotification"), object: nil, userInfo: [
+                "progress": Progress()
             ])
     }
     

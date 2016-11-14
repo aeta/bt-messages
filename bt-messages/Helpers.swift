@@ -17,8 +17,8 @@ import Foundation
  performOn(.Main) { self.tableView.reloadData() }
  ```
  */
-public func performOn(queueType: QueueType, closure: () -> Void) {
-    dispatch_async(queueType.queue, closure)
+public func performOn(_ queueType: QueueType, closure: @escaping () -> Void) {
+    queueType.queue.async(execute: closure)
 }
 
 /**
@@ -34,9 +34,9 @@ public func performOn(queueType: QueueType, closure: () -> Void) {
  delay(1.0, queueType: .Background) { alert.hide() }
  ```
  */
-public func delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: () -> Void) {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
-    dispatch_after(time, queueType.queue, closure)
+public func delay(_ delay: TimeInterval, queueType: QueueType = .main, closure: @escaping () -> Void) {
+    let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+    queueType.queue.asyncAfter(deadline: time, execute: closure)
 }
 
 /**
@@ -44,21 +44,21 @@ public func delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: 
  the helper functions supplied by the APSwiftHelpers package.
  */
 public enum QueueType {
-    case Main
-    case Background
-    case LowPriority
-    case HighPriority
+    case main
+    case background
+    case lowPriority
+    case highPriority
     
-    var queue: dispatch_queue_t {
+    var queue: DispatchQueue {
         switch self {
-        case .Main:
-            return dispatch_get_main_queue()
-        case .Background:
-            return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
-        case .LowPriority:
-            return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)
-        case .HighPriority:
-            return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
+        case .main:
+            return DispatchQueue.main
+        case .background:
+            return DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background)
+        case .lowPriority:
+            return DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.low)
+        case .highPriority:
+            return DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.high)
         }
     }
 }

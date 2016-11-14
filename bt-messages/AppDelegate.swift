@@ -12,12 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var mcManager: MCManager?
+    var mcManager: MCManager!
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         mcManager = MCManager()
-        
+        mcManager.setupPeerAndSessionWithDisplayName(UIDevice.current.name)
+        mcManager.advertiseSelf(true)
+
         return true
     }
 
