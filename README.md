@@ -14,7 +14,7 @@ This project relies on Coccapods, run ```pod install``` before opening ```bt-mes
 This app was built in approximately 4 hours, therefore, in the interest of time, common project structures (e.g. MVC) were ignored. Also, some parts of the UI don't fully function or do not provide enough context for the user. This app (at its current state) is not intended for release because of it's instability and lack of communication between the user and app.
 
 ## License
-Copyright (c) 2016 Aeta (Team Auxiliary)
+Copyright (c) 2016 Aeta
 
 MIT License
 
