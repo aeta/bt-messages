@@ -10,14 +10,10 @@
 		3F38022B5EAE460D3C728D35 /* Pods_bt_messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3F9317E5B94932F4C0F0DE /* Pods_bt_messages.framework */; };
 		733A25FD1CF5559B001AABD8 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A25FC1CF5559B001AABD8 /* Alerts.swift */; };
 		CC1DA1DA1DD85C71004CC36A /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DA1D91DD85C71004CC36A /* MessagesViewController.swift */; };
-		CCA46E941CF1F9B300C79B94 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCA46E931CF1F9AF00C79B94 /* Montserrat-Regular.otf */; };
 		CCA46E981CF1F9E200C79B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA46E971CF1F9E200C79B94 /* Main.storyboard */; };
-		CCA46E9B1CF1FA9C00C79B94 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CCA46E991CF1FA9C00C79B94 /* icon.png */; };
-		CCA46E9C1CF1FA9C00C79B94 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CCA46E9A1CF1FA9C00C79B94 /* second.png */; };
 		CCA46EA21CF2155200C79B94 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA46EA11CF2155200C79B94 /* Helpers.swift */; };
 		CCACA2A81CF16E7600F7638C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACA2A71CF16E7600F7638C /* AppDelegate.swift */; };
 		CCACA2AF1CF16E7600F7638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCACA2AE1CF16E7600F7638C /* Assets.xcassets */; };
-		CCACA2B21CF16E7600F7638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCACA2B01CF16E7600F7638C /* LaunchScreen.storyboard */; };
 		CCACA2BA1CF1749C00F7638C /* MCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACA2B91CF1749C00F7638C /* MCManager.swift */; };
 		CCD2297B1DD87413003B472F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2297A1DD87413003B472F /* SettingsViewController.swift */; };
 		CCD229821DD8A223003B472F /* PhotoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD229811DD8A223003B472F /* PhotoDetail.swift */; };
@@ -185,12 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCACA2B21CF16E7600F7638C /* LaunchScreen.storyboard in Resources */,
-				CCA46E9B1CF1FA9C00C79B94 /* icon.png in Resources */,
 				CCACA2AF1CF16E7600F7638C /* Assets.xcassets in Resources */,
 				CCA46E981CF1F9E200C79B94 /* Main.storyboard in Resources */,
-				CCA46E941CF1F9B300C79B94 /* Montserrat-Regular.otf in Resources */,
-				CCA46E9C1CF1FA9C00C79B94 /* second.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
